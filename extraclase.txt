@@ -1,0 +1,96 @@
+Ejercicio 1
+
+Las siguientes son las edades de un conjunto de estudiantes:
+[10,18,19,11,20,21,16,15,11,12]
+Se desea encontrar el promedio de edades, 
+solo de las edades mayores o iguales a 16
+
+
+1 inicio
+2 edades (10),i[0-n]; contador [0-n]<-0 
+3 suma,i[0-n]
+4 promedio,d[0-n]
+5 edades <-[10,18,19,11,20,21,16,15,11,12]
+6 mientras edades >= 16 entonces 
+7     si edades >= 16 entonces
+8         suma <- edades
+9         contador= contador +1
+10    fin si
+11fin mientras
+12promedio <- suma/5
+13<< "el promedio de edades es ",promedio
+14fin
+
+
+
+Ejercicio 2
+Las siguientes son los promedios finales de evaluación de docentes:
+colegio1 denominado Bolivar:
+[15, 16.5, 17, 19, 20, 19, 10, 16.4, 15.1, 10]
+colegio2 denominado Sur:
+[14, 11.5, 17.2, 18, 19, 17, 20, 19, 19.1, 8]
+
+Se desea determinar el colegio con mejor promedio de sus docentes, 
+considerar que los promedios de cada colegio 
+son únicamente con los valores mayores o iguales a 16.5
+1 inicio
+2 bolivar (10),d[0-n] ;contador [0-n]<-0 
+3 sur     (10),d[0-n] ;contador [0-n]<-0 
+4 sumabol,d[0-n]  
+5 sumasur,d[0-n]
+6 promediobol,d[0-n] ;promediosur,d[0-n]
+7 promedios1,x[a-z]  ;promedios2,x[a-z]
+8 bolivar [15, 16.5, 17, 19, 20, 19, 10, 16.4, 15.1, 10]     
+9 sur     [14, 11.5, 17.2, 18, 19, 17, 20, 19, 19.1, 8]        
+10   
+11mientras contador<10 entonces 
+12     si contador>= 16.5 
+13      promedios1<-promediobol(contador)+1
+14      suma<-sumabol+bolivar[contador]
+15      promedios2<-promediosur(contador)+1
+16      suma<-sumasur+sur[contador]
+17     fin si
+18       contador <- conatdor+1
+19fin mientras     
+20promediobol<-sumabol/promedios1
+21promediosur<-sumasur/promedios2
+22si promediobol > promedio sur
+23<< "el mejor promedio en colegios es ", promediobol
+24caso contraio
+25<< "el mejor promedio en colegios es ",promediosur
+26fin
+27
+28
+
+
+Ejercicio 3
+
+Las siguientes son los promedios finales de evaluación de docentes:
+colegio1 denominado Bolivar:
+[15, 16.5, 17, 19, 20, 19, 10, 16.4, 15.1, 10]
+colegio2 denominado Sur:
+[14, 11.5, 17.2, 18, 19, 17, 20, 19, 19.1, 8]
+
+Se desea determinar el promedio de final de todos los docentes 
+de los dos colegios
+
+1 inicio
+2 bolivar (10),d[0-n]   ;contador [0-n]<-0 
+3 sur (10),d[0-n]       ;contador [0-n]<-0 
+4 sumabol,d[0-n]        ;sumasur,d[0-n]        
+5 promediobol,d[0-n] ;promediosur,d[0-n] ; promediototal,d[0-n]
+6 bolivar [15, 16.5, 17, 19, 20, 19, 10, 16.4, 15.1, 10]
+7 sur     [14, 11.5, 17.2, 18, 19, 17, 20, 19, 19.1, 8]  
+8      
+9 mientras<10entonces        
+10   sumabol <- sumabol+bolivar contador
+11   sumasur <- sumabol+sur contador
+12   contador<-contador+1
+13fin mientras
+14promediobol<-sumabol/10
+15promediosur<-sumasur/10
+16promediototal<-(promediobol+promediosur)/2
+17<<"el promedio final de todos los docentes es ",promediototal
+18fin
+19
+20
